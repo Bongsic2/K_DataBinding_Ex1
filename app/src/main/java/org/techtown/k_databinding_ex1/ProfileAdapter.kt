@@ -11,7 +11,7 @@ class ProfileAdapter(private val context: Context) :
 
     var data = listOf<ProfileData>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileAdapter.ProfileVH {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileVH {
         val binding = RcvListItemBinding.inflate(
             LayoutInflater.from(context), parent, false
         )
@@ -20,13 +20,15 @@ class ProfileAdapter(private val context: Context) :
     }
 
     override fun getItemCount(): Int = data.size
-    override fun onBindViewHolder(holder: ProfileAdapter.ProfileVH, position: Int) {
-        TODO("Not yet implemented")
+
+    override fun onBindViewHolder(holder: ProfileVH, position: Int) {
+        holder.onBind(data[position])
     }
 
     class ProfileVH(val binding: RcvListItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun onBind(data : ProfileData) {
-            binding.user= data
+        fun onBind(data: ProfileData) {
+            binding.user = data
         }
+
     }
 }

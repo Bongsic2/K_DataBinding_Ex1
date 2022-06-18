@@ -8,13 +8,14 @@
         <variable
             name="activity"
             type="org.techtown.k_databinding_ex1.MainActivity" />
+
+
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/btnSample"
@@ -27,5 +28,8 @@
             android:id="@+id/mainRcv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
     </LinearLayout>
+
+
 </layout>

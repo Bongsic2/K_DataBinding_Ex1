@@ -9,9 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import org.techtown.k_databinding_ex1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun btnClick(view: View) {
-        Toast.makeText(this, "Button Click", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Button Click", Toast.LENGTH_SHORT).show()
     }
 
     fun setRcv() {
@@ -30,8 +28,9 @@ class MainActivity : AppCompatActivity() {
         binding.mainRcv.adapter = profileAdapter
         profileAdapter.data = listOf(
             ProfileData(name = "Kang", age = 26),
-            ProfileData(name = "Kim", age = 25),
+            ProfileData(name = "Kim", age = 25)
         )
         profileAdapter.notifyDataSetChanged()
     }
+
 }
